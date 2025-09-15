@@ -1,1 +1,3 @@
-print("Prvni script")
+def main():
+    print("Prvni script")
+
