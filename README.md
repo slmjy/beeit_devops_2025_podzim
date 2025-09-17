@@ -2,13 +2,5 @@
 
 1 Ukol:
 
-* Vytvoř fork repozitáře.
-
-* Do README napiš informace o sobě a co se chceš v tomto kurzu naučit.
-
-* Přidej nový commit.
-
-* Proveď git push do svého forku.
-
-* Na webu GitHubu vytvoř pull request do tohoto repozitáře. Klikni na Create pull request.
-
+* Jmenuji se Ondra a chci se něco naucit o Linuxu.
+* Rad bych udelal karierni switch do světa IT.
