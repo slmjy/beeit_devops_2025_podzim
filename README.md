@@ -1,5 +1,7 @@
 ### Použiváme 1 Pull Request pro celý kurz
 
+Pracujem ako SW testerka, a mojim cielom je rozsirit si znalosti v IT a poposunut sa dalej.
+
 1 Ukol:
 
 * Vytvoř fork repozitáře.
