@@ -1,0 +1,30 @@
+#!/bin/bash
+# Skript: system_info.sh
+# Popis: Vypíše základní informace o systému a kernelu + komentář
+
+echo "============================"
+echo "📦 Systémové informace"
+echo "============================"
+
+# Název OS
+echo "Operační systém: $(uname -s)"
+
+# Verze kernelu
+echo "Kernel verze: $(uname -r)"
+
+# Architektura
+echo "Architektura: $(uname -m)"
+
+# Volitelně – detailní informace o systému (macOS / Linux)
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    echo "Detaily macOS:"
+    sw_vers
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    echo "Detaily Linuxu:"
+    lsb_release -a 2>/dev/null || cat /etc/os-release
+fi
+
+echo ""
+echo "Komentář: Tento systém běží skvěle! 🚀"
+echo "============================"
+
