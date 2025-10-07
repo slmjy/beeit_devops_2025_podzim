@@ -26,6 +26,8 @@ PŘÍKAZY:
   upgrade               provede update + upgrade (APT) [vyžaduje sudo]
   install-cli-link      vytvoří symlink na tento skript do /bin/linux_cli [sudo]
 
+  find-beae             najde soubory obsahující v názvu písmena b, e, a, e (v tomto pořadí)
+
 PŘÍKLADY:
   $0 link --from /etc/hosts --to /tmp/hosts_link --type soft
   $0 --log-file /tmp/cli.log list-updates
@@ -75,6 +77,13 @@ cmd_install_cli_link() {
     || logError "Nepodařilo se vytvořit symlink. Spusť s 'sudo'."
 }
 
+cmd_find_beae() {
+  log "Hledám soubory, které mají v názvu písmena b, e, a, e v tomto pořadí..."
+  find / -type f -regex '.*b.*e.*a.*e.*' 2>/dev/null
+  log "Hledání dokončeno."
+}
+
+
 # Zjištění parametrů
 if [ "$#" -eq 0 ]; then help; exit 0; fi
 if [ "$1" = "--log-file" ]; then LOG_FILE="$2"; shift 2; fi
@@ -86,6 +95,7 @@ case "$CMD" in
   list-updates) cmd_list_updates ;;
   upgrade) cmd_upgrade ;;
   install-cli-link) cmd_install_cli_link ;;
+  find-beae) cmd_find_beae ;; 
   *) logError "Neznámý příkaz: $CMD"; help; exit 1 ;;
 esac
 
