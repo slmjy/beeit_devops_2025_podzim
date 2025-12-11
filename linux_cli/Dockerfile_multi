@@ -1,0 +1,27 @@
+FROM debian:trixie-slim AS base
+
+RUN apt-get update && apt-get install -y \
+lsb-release \
+procps \
+findutils \
+bsdmainutils \
+util-linux \
+adduser \
+&& rm -rf /var/lib/apt/lists/* \ 
+&& adduser --disabled-password --gecos "" sgp
+
+COPY linux_cli.sh /usr/local/bin/linux_cli
+RUN chmod +x /usr/local/bin/linux_cli
+
+FROM base AS tests
+
+COPY /test.sh /test.sh
+RUN chmod +x /test.sh && /test.sh
+
+FROM base AS production
+
+USER sgp
+COPY --from=tests /usr/local/bin/linux_cli /usr/local/bin/linux_cli
+ENTRYPOINT ["/bin/bash", "/usr/local/bin/linux_cli"]  
+
+CMD ["-h"]

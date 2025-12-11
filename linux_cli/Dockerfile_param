@@ -1,0 +1,18 @@
+FROM debian:trixie-slim
+
+RUN apt-get update && apt-get install -y \
+lsb-release \
+sudo \
+procps \
+findutils \
+bsdmainutils \
+util-linux \
+&& rm -rf /var/lib/apt/lists/*     
+
+COPY linux_cli.sh /usr/local/bin/linux_cli
+
+RUN chmod +x /usr/local/bin/linux_cli
+
+ENTRYPOINT ["/bin/bash", "/usr/local/bin/linux_cli"]
+
+CMD ["-h"]
