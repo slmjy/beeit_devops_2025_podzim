@@ -12,3 +12,6 @@
 
 * Na webu GitHubu vytvoř pull request do tohoto repozitáře. Klikni na Create pull request.
 
+1 Vypracování úkolu
+* Jmenuji se Tereza T. a mám rada statistiku. Když je hezké počasí, tak jsem ráda na ferratách. Taky ráda čtu. 
+
