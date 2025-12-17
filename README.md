@@ -1,14 +1,12 @@
-### Použiváme 1 Pull Request pro celý kurz
+# BeeIT DevOps 2025 Podzim
 
-1 Ukol:
+## O mně
+Jmenuji se Lukáš Františák. Živím se jako fotograf a kameraman a zároveň se věnuji i technickým projektům – správa NAS úložiště, práce s hardwarem a vývoj modulů pro zdravotnická zařízení.  
 
-* Vytvoř fork repozitáře.
-
-* Do README napiš informace o sobě a co se chceš v tomto kurzu naučit.
-
-* Přidej nový commit.
-
-* Proveď git push do svého forku.
-
-* Na webu GitHubu vytvoř pull request do tohoto repozitáře. Klikni na Create pull request.
-
+## Co se chci v kurzu naučit
+- Základy Linuxu
+- Git a GitHub (verzování kódu)
+- Docker a Docker Compose
+- CI/CD pipeline
+- Základy práce v cloudu (AWS/Azure)
+- Zorientovat se v DevOps jako celku a začít s reálnými projekty
