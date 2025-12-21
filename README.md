@@ -1,3 +1,6 @@
+Jsem Káťa a tohle je první úprava v gitu
+Chci se naučit pracovat s Linuxem (:
+
 ### Použiváme 1 Pull Request pro celý kurz
 
 1 Ukol:
@@ -11,4 +14,3 @@
 * Proveď git push do svého forku.
 
 * Na webu GitHubu vytvoř pull request do tohoto repozitáře. Klikni na Create pull request.
-

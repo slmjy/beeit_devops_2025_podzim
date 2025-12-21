@@ -1,0 +1,21 @@
+// =======================================================
+// --------------- JSON PRO SPUSTENI VE VS ---------------
+// =======================================================
+
+{
+    "name": "Linux CLI Development",
+    
+    "dockerfile": "../Dockerfile",
+    
+    "target": "production", 
+    
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "timonwong.shellcheck", 
+                "ms-azuretools.vscode-docker" 
+            ]
+        }
+    },
+    
+    "postCreateCommand": "echo 'otevrel si image.' && /app/linux_cli.sh -h"
